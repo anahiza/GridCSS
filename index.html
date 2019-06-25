@@ -14,7 +14,9 @@
         display: grid;
         grid-template-columns: 50% 200px 25%;
         grid-template-rows: 200px 200px;
-        grid-template: 100px 100px 100px / 33% 33% 33%;
+        grid-template: 100px 100px 100px / minmax(200px, 1fr) 1fr 1fr;
+        grid-column-gap:10px;
+        grid-row-gap: 20px;
     }
 
     .item{
