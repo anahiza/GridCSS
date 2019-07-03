@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movi.es</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/solid.css">
+    <link rel="stylesheet" href="css/regular.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            grid-template-rows: 50px 1fr;
+            grid-template-areas: "header header"
+                                "menu contenido";
+            height: 100vh;
+
+        }
+        .header{
+            grid-area: header;
+        }
+        .menu{
+            grid-area: menu;
+            background-color:rgba(252,107,104,1);
+        }
+        .content{
+            grid-area: contenido;
+        }
+        .barra-header{
+            display: grid;
+            grid-template-columns: 100px 1fr 200px;
+            grid-template-rows: 50px;
+            justify-items: center
+        }
+
+
+        .logo{
+            width: 100%;
+            padding: 10px;
+            max-height: 50px;
+
+        }
+
+        .logo img, .user-info img{
+            width: 100%;
+            max-height: 100%;
+            align-self: center;
+        }
+        .search{
+            align-self: center;
+            width: 100%;
+            text-align: center;
+
+        }
+        .search input{
+            border:1px solid gray;
+            border-radius: 5px;
+            margin:10px;
+            background-color: antiquewhite;
+            width: 100%;
+           height: 20px;
+            max-width: 350px;
+            
+        }
+        .user-info{
+            display: flex;
+            padding: 5px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }       
+
+        .menu{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            margin-right: 10px;
+        
+        }
+        .opcion{
+            height: 80px;
+            text-align: center;
+            margin: 10px;
+            align-content: baseline;
+        }
+        .opcion i{
+            font-size: 25px;
+        }
+        .ajustes{
+            align-self: baseline;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+
+        .post{
+           
+            width: 100%;
+            position: relative;
+        }
+        .post img{
+            width: 100%;
+        }
+
+        .post-overlay{
+            position: absolute;
+            right: 0;
+            bottom: 0%;
+            left: 0;        
+            top: 50%;
+            align-items: baseline;
+            height: 50%;
+           background-color:rgba(252,107,104,0.6);
+            
+            max-width: 100%;
+            padding: 5px 5px 0px 5px;
+   
+        }
+        .post-overlay p{
+            width: 100%;
+        }
+        .briefing{
+            font-size: 11px;
+        }
+
+
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="barra-header">
+                <div class="logo">
+                    <img src="logo.svg" alt=""> 
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Buscar"/>
+                </div>
+                <div class="user-info">
+                    <span>Anahi</span>
+                    <img src="logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="opciones">
+                <div class="opcion">
+                    <i class="fas fa-home"></i>
+                    <p>Home</p>
+                </div>
+                <div class="opcion">
+                        <i class="fab fa-hotjar"></i>
+                        <p>Trending</p>
+                    </div>
+                    <div class="opcion">
+                            <i class="fas fa-heart"></i>
+                            <p>Favorites</p>
+                        </div>
+
+            </div>
+            <div class="ajustes">
+                    <div class="opcion">
+                            <i class="fas fa-cog"></i>
+                            <p>Ajustes</p>
+                        </div>
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="item">
+                <div class="post">
+                    <img src="img/factory-2179347_960_720.jpg" alt="">
+                    <div class="post-overlay">
+                        <p>
+                            <h3 class="Title">Titulo</h3>
+                            <span class="briefing">Lorem ipsum dolor st amet, consectetur adipiscing eli</span>
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                    <div class="post">
+                            <img src="img/factory-2179347_960_720.jpg" alt="">
+                            <div class="post-overlay">
+                                <p>
+                                    <h3 class="Title">Titulo</h3>
+                                    <span class="briefing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        
+                                </p>
+        
+                            </div>
+                        </div>
+            </div>
+            <div class="item">
+                    <div class="post">
+                            <img src="img/factory-2179347_960_720.jpg" alt="">
+                            <div class="post-overlay">
+                                <p>
+                                    <h3 class="Title">Titulo</h3>
+                                    <span class="briefing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        
+                                </p>
+        
+                            </div>
+                        </div>
+            </div>
+            <div class="item">
+                    <div class="post">
+                            <img src="img/factory-2179347_960_720.jpg" alt="">
+                            <div class="post-overlay">
+                                <p>
+                                    <h3 class="Title">Titulo</h3>
+                                    <span class="briefing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        
+                                </p>
+        
+                            </div>
+                        </div>
+            </div>
+            <div class="item">
+                    <div class="post">
+                            <img src="img/factory-2179347_960_720.jpg" alt="">
+                            <div class="post-overlay">
+                                <p>
+                                    <h3 class="Title">Titulo</h3>
+                                    <span class="briefing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        
+                                </p>
+        
+                            </div>
+                        </div>
+            </div>
+            <div class="item">
+                    <div class="post">
+                            <img src="img/factory-2179347_960_720.jpg" alt="">
+                            <div class="post-overlay">
+                                <p>
+                                    <h3 class="Title">Titulo</h3>
+                                    <span class="briefing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        
+                                </p>
+        
+                            </div>
+                        </div>
+            </div>
+            <div class="item">
+                    <div class="post">
+                            <img src="img/factory-2179347_960_720.jpg" alt="">
+                            <div class="post-overlay">
+                                <p>
+                                    <h3 class="Title">Titulo</h3>
+                                    <span class="briefing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        
+                                </p>
+        
+                            </div>
+                        </div>
+            </div>
+            <div class="item">
+                    <div class="post">
+                            <img src="img/factory-2179347_960_720.jpg" alt="">
+                            <div class="post-overlay">
+                                <p>
+                                    <h3 class="Title">Titulo</h3>
+                                    <span class="briefing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        
+                                </p>
+        
+                            </div>
+                        </div>
+            </div>
+            <div class="item">
+                    <div class="post">
+                            <img src="img/factory-2179347_960_720.jpg" alt="">
+                            <div class="post-overlay">
+                                <p>
+                                    <h3 class="Title">Titulo</h3>
+                                    <span class="briefing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        
+                                </p>
+        
+                            </div>
+                        </div>
+            </div>           
+        </div>
+    </div>
+    </div>    
+</body>
+</html>
