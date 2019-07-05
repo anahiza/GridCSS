@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Platzi Video</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+            margin:0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+        .container{
+            display: grid;
+            grid-template-columns: minmax(200px,0.5fr) 1fr 1fr;    
+
+        }
+
+
+        .item{
+            background-color: #888888;
+            border: 1px solid white;
+        }
+
+        .playlist{
+            grid-row:span 2;
+            color: white;
+            background-color: rgba(53,54,74,1);
+            padding: 10px;
+            
+        }
+        .playlist h1 span{
+            color: red;
+        }
+
+
+        .video{
+            grid-column-start: 2;
+            grid-column-end: span 2;
+        }
+        .video-info{
+            grid-column-start: 2;
+            grid-column-end: span 2;
+        }
+        .friend-playlist{
+            color: white;
+            background-color: rgba(53,54,74,1);
+            padding: 10px;
+            align-content: center;
+        }
+        .friends{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            padding: 3px;
+
+        }
+        .avatar{
+            border-radius: 50%;
+            max-width: 50px;
+            max-height: 50px;
+            margin: 5px;
+            
+
+        }
+        .video iframe{
+            width: 100%;
+        }
+
+        .video-info{
+            display: grid;
+            grid-template-columns: repeat(9,1fr);
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item playlist">
+            <div class="lista">
+                <h1>Platzi <span>Video</span></h1>
+                <h3>Mi Playlist</h3>
+                <table>
+                    <tr>
+                        <td>1</td>
+                        <td>Video 1</td>
+                    </tr>
+                    <tr>
+                            <td>2</td>
+                            <td>Video 1</td>
+                        </tr>
+                        <tr>
+                                <td>3</td>
+                                <td>Video 1</td>
+                            </tr>
+                            <tr>
+                                    <td>4</td>
+                                    <td>Video 1</td>
+                                </tr>
+                                <tr>
+                                        <td>5</td>
+                                        <td>Video 1</td>
+                                    </tr>
+                                    <tr>
+                                            <td>6</td>
+                                            <td>Video 1</td>
+                                        </tr>
+                                        <tr>
+                                                <td>7</td>
+                                                <td>Video 1</td>
+                                            </tr>
+                                            <td>5</td>
+                                            <td>Video 1</td>
+                                        </tr>
+                                        <tr>
+                                                <td>6</td>
+                                                <td>Video 1</td>
+                                            </tr>
+                                            <tr>
+                                                    <td>7</td>
+                                                    <td>Video 1</td>
+                                                </tr>
+                </table>
+
+            </div>
+        </div>
+        <div class="item video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6nWWIdpkbIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class=" item video-info">
+            <div class="titulo">
+                <h3>Brasil avanza a la Final </h3>
+            </div>
+            <div class="views">
+                <p>894,980 views</p>
+            </div>
+
+        </div>
+        <div class=" item friend-playlist">
+            <h3>Playlist de Amigos</h3>
+            <div class="friends">
+                <img src="computadora.jpg" class="avatar" alt="">
+                <span>Nombre</span>
+                <img src="computadora.jpg" class="avatar" alt="">
+                <span>Nombre</span>
+                <img src="computadora.jpg" class="avatar" alt="">
+                <span>Nombre</span>
+                <img src="computadora.jpg" class="avatar" alt="">
+                <span>Nombre</span>
+                <img src="computadora.jpg" class="avatar" alt="">
+                <span>Nombre</span>
+                <img src="computadora.jpg" class="avatar" alt="">
+                <span>Nombre</span>
+            </div>
+        </div>
+        <div class="item comments">
+            Comentarios
+        </div>
+        <div class="item sugerencias">
+            Sugerencias
+        </div>
+
+    </div>
+</body>
+</html>
