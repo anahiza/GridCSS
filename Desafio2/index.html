@@ -173,6 +173,42 @@
             margin: 5px;
         }
 
+        .comment{
+            display: grid;
+            grid-template: 20px 1fr / 50px 1fr;
+            align-items: center;
+        }
+        .img-container{
+            grid-row-start: 1;
+            grid-row-end: span 2;
+        }
+        .comments{
+            margin: 5px;
+        }
+        .comments input{
+            background-color: #c4c4c4;
+            border:none;
+            box-shadow: 0px 2px 4px #888888;
+            padding: 5px;
+            margin: 10px;
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        .username{
+            align-self:end;            
+            font-style: italic;
+            padding: 3px;
+        }
+        .username p{
+            margin:0;
+        }
+        .comment-user{
+            margin: 5px;
+        }
+
+
+
 
         
 
@@ -283,8 +319,32 @@
                     <span>Nombre</span>
                 </div>
             </div>
-            <div class="item comments">
-                Comentarios
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <input type="text" placeholder="Añade un comentario">
+                <div class="comment">
+                    <div class="img-container">
+                        <img src="logo.svg" alt="">
+                    </div>
+                    <div class="username">
+                        <p>User Name</p>
+                    </div>
+                    <div class="comment-user">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare.</p>
+                    </div>
+                </div>
+                <div class="comment">
+                        <div class="img-container">
+                            <img src="logo.svg" alt="">
+                        </div>
+                        <div class="username">
+                            <p>User Name</p>
+                        </div>
+                        <div class="comment-user">
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare.</p>
+                        </div>
+                    </div>
+    
             </div>
             <div class="item sugerencias">
                 Sugerencias
