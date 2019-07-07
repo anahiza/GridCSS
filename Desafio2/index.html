@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Platzi Video</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <style>
@@ -74,8 +76,104 @@
 
         .video-info{
             display: grid;
+            padding: 10px;
             grid-template-columns: repeat(9,1fr);
+            grid-template-areas: "video-title video-title video-title video-title video-title video-title video-title video-title video-title"
+            "views views views views views views views views views"
+            "addbutton addbutton share save . tag1 tag2 tag3 tag4";
+            align-items: center;
+            background-color: rgb(202, 198, 198);
+            box-shadow: 1px 1px 0.5px #444444;
+
         }
+        .titulo{
+            grid-area: video-title;
+        }
+        .views{
+            grid-area: views;
+        }
+        .add{
+            grid-area: addbutton;
+            align-self: center;
+        }
+        .add-button{
+            background-color: deeppink;
+            border-radius: 5px;
+          
+            border: none;
+            cursor: pointer;
+            font-size: 10px;
+            color: white;
+            padding: 10px;
+        }
+
+        .icon{
+            color: white;
+            text-align: center;
+
+        }
+
+        .icon i{
+            font-size: 20px;
+        }
+        .share{
+            grid-area: share;
+            align-self: center;
+            justify-self: center;
+            
+
+        }
+
+        .save{
+            grid-area: save;
+        }
+
+        .tag1{
+            grid-area: tag1;
+        }
+        .tag1 p{
+            color: white;
+            background-color: aqua;
+            text-align: center;
+            padding: 3px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        .tag2{
+            grid-area: tag2;
+        }
+        .tag2 p{
+            color: white;
+            background-color: rgb(33, 53, 92);
+            text-align: center;
+            padding: 3px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        .tag3{
+            grid-area: tag3;
+        }
+        .tag3 p{
+            color: white;
+            background-color: rgb(17, 199, 87);
+            text-align: center;
+            padding: 3px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        .tag4{
+            grid-area: tag4;
+        }
+        .tag4 p{
+            color: white;
+            background-color: rgb(231, 245, 43);
+            text-align: center;
+            padding: 3px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+
         
 
     </style>
@@ -83,7 +181,7 @@
 
 <body>
     <div class="container">
-        <div class="item playlist">
+        <div class="playlist">
             <div class="lista">
                 <h1>Platzi <span>Video</span></h1>
                 <h3>Mi Playlist</h3>
@@ -131,42 +229,68 @@
 
             </div>
         </div>
-        <div class="item video">
+        <div class="video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/6nWWIdpkbIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class=" item video-info">
+        <div class="video-info">
             <div class="titulo">
                 <h3>Brasil avanza a la Final </h3>
             </div>
             <div class="views">
                 <p>894,980 views</p>
             </div>
-
-        </div>
-        <div class=" item friend-playlist">
-            <h3>Playlist de Amigos</h3>
-            <div class="friends">
-                <img src="computadora.jpg" class="avatar" alt="">
-                <span>Nombre</span>
-                <img src="computadora.jpg" class="avatar" alt="">
-                <span>Nombre</span>
-                <img src="computadora.jpg" class="avatar" alt="">
-                <span>Nombre</span>
-                <img src="computadora.jpg" class="avatar" alt="">
-                <span>Nombre</span>
-                <img src="computadora.jpg" class="avatar" alt="">
-                <span>Nombre</span>
-                <img src="computadora.jpg" class="avatar" alt="">
-                <span>Nombre</span>
+            <div class="add">
+                <button class="add-button">Agregar a mi lista</button>
             </div>
-        </div>
-        <div class="item comments">
-            Comentarios
-        </div>
-        <div class="item sugerencias">
-            Sugerencias
-        </div>
+            <div class="share icon">
+            <i class="fas fa-share"></i>
+           
+            <p>Share</p>
+            </div>
+            <div class="save icon">
+                <i class="fas fa-cloud-download-alt"></i>
+               
+                <p>Save</p>
+                </div>
+            <div class="tag1">
+                <p>Tag1</p>
+            </div>
+            <div class="tag2">
+                <p>Tag2</p>
+            </div>
+            <div class="tag3">
+                <p>Tag3</p>
+            </div>
+            <div class="tag4">
+                <p>Tag4</p>
+            </div>
+            </div>
 
+            <div class="friend-playlist">
+                <h3>Playlist de Amigos</h3>
+                <div class="friends">
+                    <img src="computadora.jpg" class="avatar" alt="">
+                    <span>Nombre</span>
+                    <img src="computadora.jpg" class="avatar" alt="">
+                    <span>Nombre</span>
+                    <img src="computadora.jpg" class="avatar" alt="">
+                    <span>Nombre</span>
+                    <img src="computadora.jpg" class="avatar" alt="">
+                    <span>Nombre</span>
+                    <img src="computadora.jpg" class="avatar" alt="">
+                    <span>Nombre</span>
+                    <img src="computadora.jpg" class="avatar" alt="">
+                    <span>Nombre</span>
+                </div>
+            </div>
+            <div class="item comments">
+                Comentarios
+            </div>
+            <div class="item sugerencias">
+                Sugerencias
+            </div>
+            
+        </div>
     </div>
 </body>
 </html>
